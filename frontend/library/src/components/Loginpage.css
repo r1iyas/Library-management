@@ -1,0 +1,44 @@
+/* Full page center alignment */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6f9;
+}
+
+/* Login box */
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.login-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input spacing */
+.login-box .form-control {
+  height: 45px;
+}
+
+/* Button styling */
+.login-btn {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Checkbox alignment */
+.form-check {
+  margin-bottom: 15px;
+}

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import './StudentReg.css';
 
 
 
@@ -44,62 +45,95 @@ function StudentReg() {
     }
 
   return (
+  <div className="studentreg-container">
+    <div className="studentreg-box">
+      <h1 className="studentreg-title">Student Registration</h1>
 
-    <div>
-      <h1>Student Registration</h1>
-        <Form onSubmit={addstd}>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter Your Name" value={name} onChange={(e)=> setName(e.target.value)} />
-      </Form.Group>
+      <Form onSubmit={addstd}>
+        <Form.Group className="mb-3">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </Form.Group>
 
-       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Department</Form.Label>
-        <Form.Control type="text" placeholder="Enter Your Department" value={department} onChange={(e)=> setDepartment(e.target.value)} />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Department</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter Your Department"
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+          />
+        </Form.Group>
 
-       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Year</Form.Label>
-        <Form.Control type="number" placeholder="Enter Your Admission year" value={year} onChange={(e)=> setYear(e.target.value)} />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Year</Form.Label>
+          <Form.Control
+            type="number"
+            placeholder="Enter Your Admission Year"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="email" placeholder="Enter Your Email" value={email} onChange={(e)=> setEmail(e.target.value)} />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Phone NO:</Form.Label>
-        <Form.Control type="text" placeholder="Enter Your Phone Number" value={phoneno}  onChange={(e)=> setPhoneno(e.target.value)} />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Phone No</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter Your Phone Number"
+            value={phoneno}
+            onChange={(e) => setPhoneno(e.target.value)}
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password"  value={password} onChange={(e)=> setPassword(e.target.value)} />
-      </Form.Group>
-      
+        <Form.Group className="mb-3">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Confirm Password</Form.Label>
-        <Form.Control type="password" placeholder="Password"  value={confirmpassword} onChange={(e)=> setConfirmpassword(e.target.value)} />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Confirm Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Confirm Password"
+            value={confirmpassword}
+            onChange={(e) => setConfirmpassword(e.target.value)}
+          />
+        </Form.Group>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p className="error-text">{error}</p>}
 
+        <Form.Group className="mb-3">
+          <Form.Check type="checkbox" label="Check me out" />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
-
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
-    
+        <Button variant="primary" type="submit" className="studentreg-btn">
+          Register
+        </Button>
+      </Form>
     </div>
-  )
+  </div>
+);
+
 }
 
 export default StudentReg

@@ -1,0 +1,50 @@
+/* Main container */
+.admin-home {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d99;
+  padding: 15px 20px;
+}
+
+.admin-logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.admin-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.admin-nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.admin-nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Description Section */
+.admin-description {
+  padding: 30px;
+}
+
+.admin-description h2 {
+  color: #004d99;
+  margin-bottom: 10px;
+}
+
+.admin-description p {
+  font-size: 16px;
+  line-height: 1.6;
+}
